@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
-
 export interface Meal {
   meal: any;
 }
@@ -12,6 +8,12 @@ export interface Meal {
 export interface Recipes {
   meals: any;
 }
+
+@Injectable({
+  providedIn: 'root'
+})
+
+
 
 export class MealRecipesUtilsService {
   recipeURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';

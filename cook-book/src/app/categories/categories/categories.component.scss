@@ -1,0 +1,103 @@
+li {
+    margin: 10px;
+    margin-left: 25px;
+    outline: none;
+    display: inline;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    .categories {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+    }
+}
+
+.check-list{
+    padding: 5px;
+}
+
+.category-name {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: #4a8662;
+    background: linear-gradient(90deg, #4a8662 0%, #4a8662 44%, #4a8662 100%);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(97, 94, 88, 0.13);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(97, 94, 88, 0.13);
+    box-shadow: 0px 0px 3px 1px rgba(97, 94, 88, 0.13);
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 0;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-size: 300% 100%;
+    transition: all .3s ease-in-out;
+}
+
+.category-name:hover {
+    background-position: 100% 0;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.category-name:active {
+    background: linear-gradient(90deg, rgb(255, 174, 0) 0%, rgb(255, 156, 8) 44%, rgb(250, 142, 2) 100%);
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.logo {
+    display: inline-block;
+    font-family: 'Grand Hotel', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 32px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(63, 63, 63);
+}
+
+@media only screen and (max-width : 330px) {
+    .logo {
+        display: none;
+    }
+
+    .wrapper {
+        margin-top: 120px;
+
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .categories {
+        margin: 0 auto;
+        width: 100vw;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width : 630px) {
+    .logo {
+        display: none;
+    }
+
+    .categories {
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+
+}

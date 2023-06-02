@@ -1,0 +1,9 @@
+<div class="wrapper">
+<mat-chip-listbox aria-label="Categories">
+    <ng-container *ngIf="categories !== null && categories !== undefined">
+        <ng-container *ngFor="let category of categories.categories; let i = index">
+            <mat-chip-option class="check-list">{{ category.strCategory }}</mat-chip-option>
+        </ng-container>
+    </ng-container>
+</mat-chip-listbox>
+</div>
