@@ -1,0 +1,23 @@
+<h3>Can't decide on what to eat today?
+    <br>How about:
+</h3>
+<div class="main-container">  
+    <!-- random recipe -->
+<mat-card class="example-card" *ngIf="random !== null">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ random.strMeal }}</mat-card-title>
+        <mat-card-subtitle>{{ random.strCategory }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="thumb align-center" [src]="random.strMealThumb" alt="Photo of the recipe">
+    <mat-card-content>
+        <section class="tags" *ngIf="random !== undefined">
+            <p class="category"
+                routerLink="/category/{{random.strCategory.toLowerCase()}}/{{removeWhitespace(random.strMeal).toLowerCase()}}/{{random.idMeal}}">
+                Read instructions
+            </p>
+        </section>
+    </mat-card-content>
+</mat-card>
+</div>
+
