@@ -75,14 +75,14 @@
     font-size: 18px;
 }
 
-.nav>.nav-links>a {
+.nav>.nav-links>span {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: #efefef;
 }
 
-.nav>.nav-links>a:hover {
+.nav>.nav-links>span:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -129,7 +129,7 @@
         left: 0px;
     }
 
-    .nav>.nav-links>a {
+    .nav>.nav-links>span {
         display: block;
         width: 100%;
     }

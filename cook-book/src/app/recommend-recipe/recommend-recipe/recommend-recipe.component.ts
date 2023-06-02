@@ -11,6 +11,7 @@ export class RecommendRecipeComponent implements OnInit {
   dishes:any;
   categoryNames:any = [];
   recommended:any;
+  
   ngOnInit() {
     const temp = localStorage.getItem('nav')
     if(temp!=null){

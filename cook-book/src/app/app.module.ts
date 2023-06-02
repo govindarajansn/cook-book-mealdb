@@ -16,6 +16,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipsModule} from '@angular/material/chips';
 import { MainComponent } from './main/main/main.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { FavoriteRecipeComponent } from './favorites/favorite-recipe/favorite-recipe.component';
 
 const routes: Routes = [
   {
@@ -34,10 +38,10 @@ const routes: Routes = [
     path: 'shopping-list',
     component: ShoppingListComponent
   },
-  // {
-  //   path: 'favourite-recipes',
-  //   component: FavouritesComponent
-  // },
+  {
+    path: 'favourite-recipes',
+    component: FavoriteRecipeComponent
+  },
   // {
   //   path: '404',
   //   component: ErrorComponent
@@ -58,7 +62,8 @@ const routes: Routes = [
     CategoriesComponent,
     RecommendRecipeComponent,
     ErrorComponent,
-    MainComponent
+    MainComponent,
+    FavoriteRecipeComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,10 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatTabsModule,
     MatChipsModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
