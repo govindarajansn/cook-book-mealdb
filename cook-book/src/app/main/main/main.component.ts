@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AppComponent } from '../../app.component';
 import { MealRecipesUtilsService, Recipes } from '../../services/meal-recipes-utils.service';
@@ -8,7 +8,7 @@ import { MealRecipesUtilsService, Recipes } from '../../services/meal-recipes-ut
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnInit{
   random : any = {};
   ingredients : any= [];
 
