@@ -20,6 +20,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { FavoriteRecipeComponent } from './favorites/favorite-recipe/favorite-recipe.component';
+import { CategoriesListingComponent } from './categories-listing/categories-listing.component';
+import { RecipesComponent } from './categories-listing/recipes/recipes.component';
 
 const routes: Routes = [
   {
@@ -28,12 +30,12 @@ const routes: Routes = [
   },
   {
     path: 'category/:category.strCategory',
-    component: MenuListComponent
+    component: CategoriesListingComponent
   },
-  // {
-  //   path: 'category/:category.strCategory/:dish.strMeal/:dish.idMeal',
-  //   component: RecipeComponent
-  // },
+  {
+    path: 'category/:category.strCategory/:dish.strMeal/:dish.idMeal',
+    component: RecipesComponent
+  },
   {
     path: 'shopping-list',
     component: ShoppingListComponent
@@ -63,7 +65,9 @@ const routes: Routes = [
     RecommendRecipeComponent,
     ErrorComponent,
     MainComponent,
-    FavoriteRecipeComponent
+    FavoriteRecipeComponent,
+    CategoriesListingComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,10 @@
 .container {
-    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
 }
 
-p {
-    font-size: 20px;
-    color: #fafafa;
-    margin-top: 16px;
-    text-align: center;
-}
 .all-dishes {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +20,6 @@ p {
     padding: 10px;
     margin: 20px;
 }
-
 .details-box {
     background-color: #fff;
     box-sizing: border-box;
@@ -35,7 +31,6 @@ p {
     cursor: pointer;
     opacity: 0.8;
 }
-
 .dish {
     font-size: 16px;
     font-weight: 600;
@@ -44,9 +39,8 @@ p {
     text-align: center;
     color: #7a7a7a;
 }
-
-.dish:hover {
-    color: #904e95;
+.dish:hover{
+   color : #904e95;
 }
 .button {
     border-radius: 2px;
@@ -61,7 +55,7 @@ p {
     cursor: pointer;
 }
 
-.button:hover {
+.button:hover{
     color: #904e95;
 }
 
@@ -76,26 +70,15 @@ p {
     margin-left: 150px;
 }
 
-.all-dishes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+img {
+    width: 98%;
+    border-radius: 10px;
 }
 
-.dish {
-    font-size: 16px;
-    font-weight: 600;
-    transition: .1s ease-in-out;
-}
-
-.cookbook-title{
+.list-title{
     display: flex;
     justify-content: center;
     color: #2d0a45;
-    font-size: 38px;
-}
-
-img {
-    width: 98%;
-    border-radius: 5px;
+    font-weight: 600px;
+    font-size: 30px;
 }

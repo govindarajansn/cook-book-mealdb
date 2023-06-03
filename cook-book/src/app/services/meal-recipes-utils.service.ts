@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface Meal {
   meal: any;
@@ -22,7 +23,7 @@ export class MealRecipesUtilsService {
   allCategoriesURL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
   areaURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=';
 
-  favourites = [];
+  favourites : any = [];
   constructor(private http: HttpClient) { }
   fetchRecipes(meal: any) {
     return this.http.get(this.recipeURL + meal);
@@ -44,10 +45,10 @@ export class MealRecipesUtilsService {
     return this.http.get(this.areaURL + area);
   }
 
-  // saveRecipe(i: any) {
-  //   if (this.favourites.includes(i) === false) {
-  //     this.favourites = [...this.favourites, i];
-  //     localStorage.setItem(`favourites`, JSON.stringify(this.favourites));
-  //   }
-  // }
+  saveRecipe(i: any) {
+    if (this.favourites.includes(i) === false) {
+      this.favourites = [...this.favourites, i];
+      localStorage.setItem(`favourites`, JSON.stringify(this.favourites));
+    }
+  }
 }
