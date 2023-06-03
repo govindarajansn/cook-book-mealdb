@@ -33,7 +33,7 @@ export class MainComponent implements OnInit{
     if(this.random){
       this.fetchRandomRecipe();
     }
-    this.app.setTitle(`Tasty Recipes and Food Inspirations | Foodster`);
+    this.app.setTitle(`Tasty Recipes and Food Inspirations | FoodGram`);
   }
   
 fetchRandomRecipe() {

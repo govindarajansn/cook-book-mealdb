@@ -25,7 +25,7 @@ export class RecipesComponent implements OnInit{
     this.mealRecipesUtilsService.fetchRecipes(this.id)
       .subscribe((data: any) => {
         this.data = data.meals[0];
-        this.app.setTitle(`${data.meals[0].strMeal} Recipe | Foodster `);
+        this.app.setTitle(`${data.meals[0].strMeal} Recipe | FoodGram `);
         localStorage.setItem(this.id, JSON.stringify(this.data));
         this.listIngredients();
         localStorage.setItem('ingredients', JSON.stringify(this.ingredients));

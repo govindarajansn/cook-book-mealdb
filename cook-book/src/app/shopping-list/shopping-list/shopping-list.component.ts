@@ -12,7 +12,7 @@ export class ShoppingListComponent implements OnInit {
   list:any;
 
   ngOnInit() {
-    this.app.setTitle('Add your groceries to shopping list | Foodster');
+    this.app.setTitle('Add your groceries to shopping list | FoodGram');
     this.list = localStorage.getItem('shopping list');
     this.list = JSON.parse(this.list);
   }

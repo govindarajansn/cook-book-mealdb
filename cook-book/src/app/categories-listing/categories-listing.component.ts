@@ -17,7 +17,7 @@ export class CategoriesListingComponent {
       ngOnInit() {
     this.route.params.subscribe(params => {
       this.category = params['category.strCategory'];
-      this.app.setTitle(`Quick and Tasty ${this.category.charAt(0).toUpperCase() + this.category.slice(1)} Recipes | Foodster`);
+      this.app.setTitle(`Quick and Tasty ${this.category.charAt(0).toUpperCase() + this.category.slice(1)} Recipes | FoodGram`);
       const dishes = localStorage.getItem(this.category);
       if(dishes){
       const cachedDishes = JSON.parse(dishes);

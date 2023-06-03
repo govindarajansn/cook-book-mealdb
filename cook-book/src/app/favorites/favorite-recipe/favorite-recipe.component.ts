@@ -14,7 +14,7 @@ export class FavoriteRecipeComponent implements OnInit {
     favourites : any = [];
 
     ngOnInit() {
-    this.app.setTitle('Cookbook. All your favourite recipes in one place | Foodster');
+    this.app.setTitle('Cookbook. All your favourite recipes in one place | FoodGram');
     this.favs = localStorage.getItem('favourites');
     this.favs = JSON.parse(this.favs);
     this.showFavs();
