@@ -32,7 +32,8 @@ export class CategoriesComponent implements OnInit  {
   }
 
   fetchCategories() {
-    if (this.categories !== null) {
+    const navCached = localStorage.getItem('nav');
+    if (navCached !== null) {
       return;
     }
 

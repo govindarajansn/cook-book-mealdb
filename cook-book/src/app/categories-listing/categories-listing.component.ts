@@ -14,7 +14,8 @@ export class CategoriesListingComponent {
     constructor(private mealRecipesUtilsService: MealRecipesUtilsService,
     private route: ActivatedRoute,
     private app: AppComponent) { }
-      ngOnInit() {
+    
+    ngOnInit() {
     this.route.params.subscribe(params => {
       this.category = params['category.strCategory'];
       this.app.setTitle(`Quick and Tasty ${this.category.charAt(0).toUpperCase() + this.category.slice(1)} Recipes | FoodGram`);
@@ -23,9 +24,9 @@ export class CategoriesListingComponent {
       const cachedDishes = JSON.parse(dishes);
       if (cachedDishes !== null) {
         this.dishes = cachedDishes;
-      } else {
+      }} else {
         this.fetchCategoryDishes(this.category);
-      }}
+      }
     });
   }
      fetchCategoryDishes(category:any) {
