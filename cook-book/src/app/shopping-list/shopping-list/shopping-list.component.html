@@ -1,17 +1,14 @@
-
-<mat-list class="container">
-    <h1 mat-subheader class="title-shop">Shopping List</h1>
-    <p mat-subheader>Add ingredients to your shopping list to make sure that you don't forget to buy anything.</p>
-
-    <ng-container *ngIf="list !== null && list !== undefined && list.length !== 0">
-        <mat-list-item *ngFor="let ingredient of list; let i = index">
-            {{ ingredient }}
-            <button mat-icon-button class="recipe-button add remove" (click)="removeFromList(i)">
-                <mat-icon>close</mat-icon>
-            </button>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-    </ng-container>
-</mat-list>
-
+<div class="container">
+    <h1 class="title-shop">Shopping List</h1>
+    <p>Add ingredients to your shopping list to make sure that you don't forget to buy anything.
+    </p>
+    <div class="list-shop">
+    <ul *ngIf="list !== null && list !== undefined && list !== []">
+        <li *ngFor="let ingredient of list, let i = index">{{ingredient}}
+            <button class="recipe-button add remove" (click)="removeFromList(i)">x</button>
+        </li>
+    </ul>
+    </div>
 <app-recommend-recipe></app-recommend-recipe>
+</div>
+
